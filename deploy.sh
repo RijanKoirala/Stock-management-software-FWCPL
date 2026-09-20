@@ -52,6 +52,7 @@ sudo mkdir -p /var/www/stockos/uploads
 echo "📂 Copying project files to /var/www/stockos..."
 # Copy static frontend files
 sudo cp -r index.html css js /var/www/stockos/
+[ -f logo.png ] && sudo cp logo.png /var/www/stockos/ || true
 # Copy backend files
 sudo cp package.json schema.sql server.js backup_email.js /var/www/stockos/
 if [ -f .env ]; then
